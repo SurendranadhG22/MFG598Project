@@ -1,38 +1,57 @@
-# MFG598Project
-The UAV Landing project is a sophisticated ROS simulation for guiding UAVs to land on both stationary and moving targets using dynamic control strategies. It integrates the hector_quadrotor model and hector_gazebo for lifelike simulations, featuring advanced velocity estimation and PID tuning, supported by Python and visualized through RViz.
-Here's a concise README.md for the UAV Landing project:
+Sure, here's a README template for your GitHub project on a drone that follows lines and detects objects for landing:
 
 ---
 
-# UAV Landing Project
+# Line-Following Drone with Object Detection
 
-## Overview
-This ROS-based project enables unmanned autonomous vehicles (UAVs) to autonomously land on both stationary and moving targets. Utilizing the `hector_quadrotor` model and `hector_gazebo` for simulations, the project aims to advance UAV landing strategies.
+This project is designed to create an autonomous drone capable of following a line and detecting specific objects or circles to land on. The drone uses computer vision techniques to process visual input, track lines, and identify landing zones. This project is ideal for anyone interested in robotics, drones, and computer vision.
 
 ## Features
-- **Dynamic Target Tracking**: Adjust landing strategies based on real-time movements of targets.
-- **Velocity Estimation**: Use advanced algorithms to estimate target velocity.
-- **PID Tuning**: Optimize control parameters for precise landings.
-- **Visualization**: Utilize RViz for real-time 3D visualization of UAV operations.
 
-## Installation
-Clone this repo into your ROS workspace:
+- **Line Following:** The drone autonomously follows a predefined path marked by a line on the ground.
+- **Object Detection:** Utilizes computer vision to detect and recognize specific objects or circles as potential landing zones.
+- **Autonomous Landing:** Automatically lands on the detected object, ensuring precision and safety.
+- **Real-Time Processing:** Processes video input in real-time to make immediate navigation and landing decisions.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes given you have a parrot Mambo.
+
+### Prerequisites
+
+What things you need to install the software and how to install them:
+
+```bash
+sudo apt-get install python3
+sudo apt-get install python3-pip
+pip3 install opencv-python
+pip3 install numpy
 ```
-cd ~/catkin_ws/src
-git clone https://github.com/yourusername/uav_landing.git
-cd ..
-catkin_make
+
+### Installing
+
+A step-by-step series of examples that tell you how to get a development environment running:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/SurendranadhG22/MFG598Project
+```
+
+2. Navigate to the project directory:
+```bash
+cd line-following-drone
+```
+
+3. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the main script:
+```bash
+python3 main.py
 ```
 
 ## Usage
-Launch the simulation with:
-```
-roslaunch uav_landing main.launch
-```
 
-## Contributing
-Feel free to fork this repository and submit pull requests or open issues to suggest improvements.
-
----
-
-This README provides essential information about the project, how to set it up, and how to contribute to its development.
+To use this project, ensure your drone's camera is properly calibrated and positioned. Start the drone in a known location with a visible line and objects to detect. The system will handle the rest, guiding the drone along the path and executing landing when an object is detected.
