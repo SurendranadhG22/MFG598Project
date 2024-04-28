@@ -1,7 +1,3 @@
-Sure, here's a README template for your GitHub project on a drone that follows lines and detects objects for landing:
-
----
-
 # Line-Following Drone with Object Detection
 
 This project is designed to create an autonomous drone capable of following a line and detecting specific objects or circles to land on. The drone uses computer vision techniques to process visual input, track lines, and identify landing zones. This project is ideal for anyone interested in robotics, drones, and computer vision.
